@@ -1,0 +1,260 @@
+
+
+.main-div-select-search-background{
+  width: 100%;
+  height: 315px !important;
+  display: flex;
+  
+
+
+}
+
+.select-search-div-background-photo{
+
+   
+  background: no-repeat center;
+	background-size: cover;
+	width: 100%  !important;
+	max-height: 100% !important;
+ 
+  
+	
+
+}
+
+.select-search-button-stock-page:hover{
+   background-color: rgba(128,0,0, 0.75) !important;
+   color: white !important;
+   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+
+.main-div-select-search-background-on-mobile{
+  display: none ;
+}
+
+.stock-main-content{
+  width: 100%;
+  height: 100% !important;
+
+
+  
+  
+ 
+}
+
+
+
+
+
+
+.div-btn-load-more-stock-card{
+  width : 20%;
+  margin: auto;
+  padding-bottom: 5%;
+ 
+}
+
+/* ~~~~~~~ INIT. BTN ~~~~~~~ */
+
+.btn-load-more-stock-card{		
+	position: relative;	
+  text-align: center;
+	padding: 5%;
+	color: gray;
+	letter-spacing:0.15rem ;
+	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
+	cursor: pointer;
+	user-select: none;
+  background-color: rgba(118, 116, 116, 0.2);
+  border: 2px solid transparent;
+ 
+ 
+
+}
+
+.btn-load-more-stock-card:before, .btn-load-more-stock-card:after {
+	content: '';
+	position: absolute;	
+	transition: inherit;
+	z-index: -1;
+  background-color:  rgba(118, 116, 116, 0.2);
+}
+
+
+
+
+@media screen and (min-width: 961px) {
+  .btn-load-more-stock-card:hover {
+    color: white;
+    transition-delay: .5s;
+    background-color:  rgba(118, 116, 116, 0.2);
+    background-color: black;
+  }
+
+
+
+  .btn-load-more-stock-card:hover:before {
+    transition-delay: 0s;
+  }
+
+  .btn-load-more-stock-card:hover:after {
+    background: var(--inv);
+    transition-delay: .35s;
+  }
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 960px) {
+
+  .main-div-select-search-background{
+     display: none ;
+  }
+
+
+  .main-div-select-search-background-on-mobile{
+    width: 100%;
+    /* height: 315px !important; */
+    display: unset;
+    height: 335px !important;
+   
+  }
+
+  .select-search-div-background-photo-on-mobile{
+    background: no-repeat center;
+    background-size: cover;
+    width: 100%  !important;
+    /* max-height: 100% !important; */
+    height: 335px !important;
+    padding-top: 10% !important;
+    padding-bottom: 10% !important;
+    
+  }
+
+
+.stock-card-main{
+ 
+  display: block !important;
+  margin: 0% !important;
+  
+}
+
+.stock-card-ul{
+ 
+  padding-left: 4.5% !important;
+  padding-right: 4.5% !important;
+  display: block !important;
+
+ 
+
+}
+
+
+.stock-card-div{
+  
+  padding-top: 5.5%;
+  padding-bottom: 5.5%;
+  max-width: 100% !important;
+  padding-left: 0% !important;
+  padding-right: 0% !important;
+ 
+ 
+}
+
+
+.div-btn-load-more-stock-card{
+  width : 60%;
+
+ 
+}
+
+
+.btn-load-more-stock-card{		
+
+	padding: 5%;
+	color: white !important;
+
+	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
+	
+  background-color: black !important;
+  border: 2px solid black !important;
+ 
+ 
+
+}
+
+.btn-load-more-stock-card:before, .btn-load-more-stock-card:after {
+
+  background-color:black !important;
+}
+
+.modal-close-on-mobile{
+  top: 1.0vh !important;
+  right: 2.0% !important;
+}
+
+
+
+.modal-x-icon-on-mobile-searc-select{
+    font-size:  1.6rem !important;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+@supports (-webkit-touch-callout: none) {
+  .modal-close-on-mobile{
+    top: 40vh !important;
+    right: 1.25% !important;
+  }
+}

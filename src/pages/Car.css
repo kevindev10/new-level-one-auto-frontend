@@ -1,0 +1,264 @@
+
+
+
+
+.car-page-slick-slider .slick-prev {
+  margin-left: 4.5% !important;
+  margin-top: -2.25% !important;
+  z-index: 1;
+}
+
+.car-page-slick-slider .slick-next {
+  margin-right: 9.4% !important;
+  margin-top: -2.25% !important;
+  z-index: 1;
+  
+}
+
+.car-page-slick-slider .slick-prev:before{
+
+  color: white !important;
+  font-size: 50px !important;
+ 
+ 
+}
+.car-page-slick-slider .slick-next:before{
+  color: white !important;
+  font-size: 50px !important;
+
+
+}
+
+.car-page-title-price-mobile{
+  display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 960px) {
+  
+  .car-page-flex-title{
+    display: block !important;
+    padding-left: 2.5% !important;
+    padding-right: 2.5% !important;
+    text-align: center;
+  }
+
+  .car-page-title-description{
+    padding-left: 2.5% !important;
+    padding-right: 2.5% !important;
+    text-align: center;
+    font-size: 1.0rem !important;
+    padding-top: 1.5%;
+  
+   
+  }
+ .car-page-title-heading{
+  padding-top: 2.5%;
+  padding-bottom: 1.5%;
+  font-weight: 100 !important ;
+ }
+ .car-page-title-price-desktop{
+    display: none !important;
+ }
+ .car-page-title-price-mobile{
+  display: block !important;
+  text-align: center;
+  padding-top: 1.5%;
+  padding-bottom: 3.5%;
+  
+
+ }
+ .car-page-title-price-mobile-font{
+  font-size: 1.4rem !important;
+  font-weight: 100 !important;
+
+ }
+
+  .car-page-flex-main-sliders{
+    display: block !important;
+     height:auto !important;
+     margin-bottom:auto !important;
+    padding: auto !important;
+    
+
+  }
+  .car-page-slider-on-mobile{
+    display: none !important;
+   
+  }
+  .car-page-div-slick-slider{
+    /* width: 21.25rem !important;
+   
+    height: 14.188rem !important; */
+    /* display: flex !important;
+    justify-content: center !important;
+    align-items: center !important; */
+    width: 100% !important;
+    
+    margin-left:0vw !important;
+    margin-right:0vw !important;
+    height: 100% !important;
+  
+  }
+
+  .car-page-slider-image-on-mobile{
+    /* width:  21.25rem  !important;
+    height: 14.188rem  !important; */
+    max-width: none !important;
+  
+   width: 100% !important;
+    height: 226.5px !important;
+    padding: auto !important;
+    object-fit: cover !important;
+    margin-left: 0% !important;
+    margin-right: 0% !important;
+    
+
+
+  }
+
+
+  .car-page-slick-slider .slick-prev {
+    margin-left: 8.5% !important;
+    margin-top: -2.25% !important;
+   
+  }
+
+  .car-page-slick-slider .slick-next {
+    margin-right: 10.7% !important;
+    margin-top: -2.25% !important;
+   
+    
+  }
+
+  .car-page-slick-slider .slick-prev:before{
+
+    
+    font-size:27px !important;
+   
+   
+  }
+  .car-page-slick-slider .slick-next:before{
+    
+    font-size: 27px !important;
+  
+  
+  }
+
+  .car-page-main-div{
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75) inset;
+  }
+
+
+
+  .share-contact-enquire-print{
+    display: block !important;
+  }
+  .share{
+    justify-content: space-around;
+    margin-top: 5.5% !important;
+  }
+
+  .Share-this-vehicle{
+    font-size: 0.9rem !important;
+  }
+
+  .car-page-contactus{
+    display: block !important;
+  }
+
+  .car-page-call-us-paragraph{
+    font-size: 0.9rem !important;
+    margin: 0 auto !important;
+    margin-top: 5% !important;
+  }
+
+  .enquire-print{
+    display: block !important;
+    width: 100% !important;
+  }
+
+
+  .modal-size-on-mobile{
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .modal-x-icon-on-mobile{
+    font-size: 2.5rem !important;
+  
+  }
+
+  .enquire-main{
+    margin-top: 10% !important;
+    margin-bottom: 5% !important;
+    text-align:center ;
+  }
+
+  .enquire-button-on-mobile{
+    font-size: 0.75rem !important;
+  }
+
+  .print-main{
+    margin-top: 5% !important;
+    margin-bottom: 10% !important;
+    text-align:center ;
+  }
+
+  .print-button-on-mobile{
+    font-size: 0.75rem !important;
+  }
+
+  .vehicle-ovwerview{
+    padding-top: 5% !important;
+  }
+
+  .vehicle-ovwerview-flex{
+    display: block !important;
+  }
+  .vehicle-ovwerview-first-col{
+    width: 100% !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    padding-top:  5% !important;
+    padding-bottom:  0% !important;
+    
+  }
+
+  .vehicle-ovwerview-second-col{
+    width: 100% !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    padding-top:  0% !important;
+    padding-bottom:  5% !important;
+  }
+
+  .vehicle-details{
+    padding-top: 5% !important;
+  }
+
+
+}
