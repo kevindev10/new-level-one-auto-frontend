@@ -1,0 +1,70 @@
+
+
+
+.main-div-sellYourCar-background{
+  width: 100%;
+  height: 450px !important;
+  display: flex;
+  
+
+
+}
+
+.sellYourCar-div-background-photo{
+
+   
+  background: no-repeat center;
+	background-size: cover;
+	width: 100%  !important;
+	max-height: 100% !important;
+
+  
+	
+
+}
+
+.main-div-sellYourCar-background-on-mobile{
+  display: none ;
+}
+
+
+
+
+
+
+@media screen and (max-width: 960px) {
+  .main-div-sellYourCar-background{
+    display: none !important;
+  }
+
+  .main-div-sellYourCar-background-on-mobile{
+    width: 100%;
+    /* height: 315px !important; */
+    display: unset;
+    height: 335px !important;
+   
+  }
+
+  .sellYourCar-div-background-photo-on-mobile{
+    background: no-repeat center;
+    background-size: cover;
+    width: 100%  !important;
+    /* max-height: 100% !important; */
+    height: 335px !important;
+    padding-top: 10% !important;
+    padding-bottom: 10% !important;
+    
+  }
+
+
+  .sell-your-car-sub-heading{
+    font-size: 1.3rem !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    padding-bottom: 1.5% !important;
+    color: black !important;
+    font-weight: bold !important;
+  }
+
+
+}
