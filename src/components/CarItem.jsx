@@ -21,7 +21,7 @@ function CarItem({ car, id, onEdit, onDelete }) {
               <img className='car-item-img-on-mobile' src={car.imageUrls[0]} alt={car.title}  width='100%' height='215px' style={{objectFit:'cover'}}/>
  
 
-                    {!onDelete  && !onEdit &&
+                    {/* {!onDelete  && !onEdit && */}
                         <>
                             <div className=''></div>
                                 <div className="centered1-stock-card">
@@ -32,7 +32,7 @@ function CarItem({ car, id, onEdit, onDelete }) {
 
                         </>
                       
-                    }
+                    {/* } */}
 
             </div>
              {/* eslint-disable-next-line */}

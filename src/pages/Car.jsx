@@ -306,6 +306,19 @@ const handleClose = () =>{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
   <>
     <main
@@ -564,8 +577,8 @@ const handleClose = () =>{
                                         setOpen(true) 
                                       }, 500)
                                     }}
-                                    style={{'backgroundColor':'black', 'color':'white', 'fontSize':'1.0rem', 'padding':'10px 50px 10px 50px',  border:'4px solid maroon', letterSpacing:'0.15rem'}} 
-                                    className='enquire-button-on-mobile'
+                                    style={{'fontSize':'1.0rem', 'padding':'10px 50px 10px 50px',  letterSpacing:'0.15rem'}} 
+                                    className='enquire-button-on-mobile enquire-button-hover'
 
                                    
                                   >
@@ -633,13 +646,35 @@ const handleClose = () =>{
 
                       
 
-                      </div>
+                      </div> 
 
-                      <div className='print-main' >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   <div className='print-main' >
                                           <Button
                                              variant="contained"
-                                             style={{'backgroundColor':'black', 'color':'white', 'fontSize':'1.0rem', 'padding':'10px 50px 10px 50px',  border:'4px solid maroon', letterSpacing:'0.15rem',}} 
-                                             className='print-button-on-mobile'
+                                             style={{'fontSize':'1.0rem', 'padding':'10px 50px 10px 50px', letterSpacing:'0.15rem',}} 
+                                             className='print-button-on-mobile enquire-button-hover'
                                              onClick={() => window.print()}
                                           >
                                             
@@ -668,55 +703,7 @@ const handleClose = () =>{
 
 
 
- 
-
-
-
-
-
-
-
    
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

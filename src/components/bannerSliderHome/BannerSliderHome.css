@@ -54,10 +54,12 @@
 /* ~~~~~~~ INIT. BTN ~~~~~~~ */
 
 .btn {		
+	margin-left: 1.5%;
+  width: 100%;
 	position: relative;	
-	padding: 1.4rem 4.2rem;
-	padding-right: 3.1rem;
+	padding: 6.5%;
 	font-size: 1.3rem;
+	flex-wrap:nowrap !important;
 	color: gray;
 	letter-spacing: 0.4rem;
 	text-transform: uppercase;
@@ -65,6 +67,7 @@
 	cursor: pointer;
 	user-select: none;
   background-color: rgba(118, 116, 116, 0.17);
+	text-align: center;
 }
 
 .btn:before, .btn:after {
@@ -179,12 +182,17 @@
 
 
 .btn {		
-
+	margin-left: 0%  !important;
+  margin-right: 0% !important;
 	font-size: 0.8rem;
 	color: white;
 	letter-spacing: 0.15rem;
-	background-color: rgba(118, 116, 116, 0.35) !important;
+	background-color: rgba(118, 116, 116, 0.55) !important;
 
+	padding-left: 0%!important;
+   padding-right: 0%!important;
+   text-align: center;
+    overflow: hidden !important;
 	
 	
 
