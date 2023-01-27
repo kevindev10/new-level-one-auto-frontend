@@ -12,7 +12,7 @@ export const navItems = [
     path: "/",
     nName: "nav-item",
     sName: "sidebar-item",
-    icon: <Icons.FaHome />,
+    icon: <Icons.FaHome style={{color:'rgba(0,0,0, 0.7)'}} />,
   },
   {
     id:2,
@@ -20,7 +20,7 @@ export const navItems = [
     path: "/stock",
     nName: "nav-item",
     sName: "sidebar-item",
-    icon: <Icons.FaCartArrowDown />,
+    icon: <Icons.FaCartArrowDown style={{color:'rgba(0,0,0, 0.7)'}} />,
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ export const navItems = [
     path: "/previously-sold",
     nName: "nav-item",
     sName: "sidebar-item",
-    icon: <FaTruckLoading/>,
+    icon: <FaTruckLoading style={{color:'rgba(0,0,0, 0.7)'}}/>,
   },
 
   {
@@ -37,7 +37,7 @@ export const navItems = [
     path: "/sell-your-car",
     nName: "nav-item",
     sName: "sidebar-item",
-    icon: <FaWallet/>,
+    icon: <FaWallet style={{color:'	rgba(0,0,0, 0.7)'}}/>,
   },
 
   {
@@ -46,7 +46,7 @@ export const navItems = [
     path: "/frequently-asked-questions",
     nName: "nav-item",
     sName: "sidebar-item",
-    icon: <FaQuestionCircle/>,
+    icon: <FaQuestionCircle style={{color:'rgba(0,0,0, 0.7)'}}/>,
   },
 
   {
@@ -55,7 +55,7 @@ export const navItems = [
     path: "/contact-us",
     nName: "nav-item",
     sName: "sidebar-item",
-    icon: <Icons.FaPhone/>,
+    icon: <Icons.FaPhone style={{color:'rgba(0,0,0, 0.7)'}}/>,
   },
 
 

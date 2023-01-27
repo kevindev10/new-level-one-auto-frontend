@@ -47,6 +47,49 @@ function Navbar() {
       
         {!mobile && (
           
+          <div >
+
+
+                  
+          <div>
+         
+                <div className='' style={{display:'flex' , justifyContent:'flex-end', marginBottom:'1.5%'}}>
+
+
+                    <div className=" nav-item " >
+                           <Link to='/'>
+                           <i className="fa fa-map-marker fa-1x " aria-hidden="true" style={{fontSize:'1.0rem', color:'rgba(0,0,0, 0.7)' }}></i> &nbsp; 
+                           <p style={{fontSize:'1.025rem',  }}>Nairobi.</p>
+ 
+                           </Link>
+                    </div>
+
+                      <div className='nav-item'>
+                          <a href="tel:+0712123123" className=''>
+                             <i className="fas fa-mobile-alt fa-1x " style={{fontSize:'1.0rem', color:'rgba(0,0,0, 0.7)'  }}></i>  &nbsp; 
+                             <p style={{fontSize:'1.025rem',  }}>0712123123</p>
+                          </a>
+                      </div>
+              
+            
+                      <div  className='nav-item'>
+                          <a href="mailto:leveloneauto@mail.com" target="blank" rel="noreferrer" className=''>
+                              <i className="fas fa-envelope  fa-1x " style={{fontSize:'1.0rem', color:'rgba(0,0,0, 0.7)' }}></i> &nbsp;
+                              <p style={{fontSize:'1.025rem',  }}>Email Us</p>
+                          </a>
+                      </div>
+            
+
+                   
+                    
+            
+              </div>
+
+
+
+            
+        </div>
+
         
           
           <ul className="nav-items">
@@ -64,6 +107,9 @@ function Navbar() {
             })}
           </ul>
 
+
+       
+        </div>
          
         )}
         {/* {!mobile && <Button />} */}

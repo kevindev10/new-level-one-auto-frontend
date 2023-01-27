@@ -7,7 +7,7 @@ import { wrapHistory } from "oaf-react-router"
 
 
 import PrivateRoute from './components/PrivateRoute'
-import SignUp from "./pages/SignUp";
+// import SignUp from "./pages/SignUp";
 import SignIn from './pages/SignIn';
 import ForgotPassword from './pages/ForgotPassword'
 import Home from './pages/Home'
@@ -33,7 +33,7 @@ import  ViewFeaturedCar from './pages/ViewFeaturedCar'
 function App() {
 
         const history = createBrowserHistory();
-        wrapHistory(history, { renderTimeout: 500 });
+        wrapHistory(history, { renderTimeout: 750 });
   return (
     <>
 
@@ -58,9 +58,9 @@ function App() {
 
 
 
-              <Route path="/sign-up"  >
+              {/* <Route path="/sign-up"  >
                       <SignUp/>
-              </Route>
+              </Route> */}
 
 
               <Route path='/login'  >

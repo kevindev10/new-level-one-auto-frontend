@@ -97,9 +97,9 @@ function SignIn() {
         </form>
 
 
-        <Link to='/sign-up' className='registerLink'>
+        {/* <Link to='/sign-up' className='registerLink'>
           Sign Up Instead
-        </Link>
+        </Link> */}
       </div>
     </>
   )

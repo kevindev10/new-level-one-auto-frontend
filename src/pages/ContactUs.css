@@ -3,7 +3,7 @@
 
 
 .select-bx-stylin:active{
-	border:1px solid !EDEDED;
+	border:1px solid #EDEDED;
 }
 
 
@@ -108,7 +108,7 @@
 		display: block;
 	}
 
-	. select-label-on-mobile{
+	.select-label-on-mobile{
 		width: 100% !important;
 	}
 
