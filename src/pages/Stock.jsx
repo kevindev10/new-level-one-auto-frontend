@@ -11,7 +11,7 @@ import {
   where,
   orderBy,
   limit,
-  startAfter,
+  // startAfter,
 } from 'firebase/firestore'
 import { db } from '../firebase.config'
 import { toast } from 'react-toastify'
@@ -39,7 +39,7 @@ function Stock() {
 
   const [cars, setCars] = useState(null)
   const [loading, setLoading] = useState(true)
-  const [lastFetchedListing, setLastFetchedListing] = useState(null)
+  // const [lastFetchedListing, setLastFetchedListing] = useState(null)
   const [selectedOption, setSelectedOption] = useState(null);
   const [selectedOption2, setSelectedOption2] = useState(null);
   const [selectedOption3, setSelectedOption3] = useState(null);
@@ -97,7 +97,7 @@ function Stock() {
 
 // handle Modal open and closs functions
 
-  const handleOpen = () => setOpen(true);
+  // const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
 
@@ -124,8 +124,8 @@ function Stock() {
         // Execute query
         const querySnap = await getDocs(q)
 
-        const lastVisible = querySnap.docs[querySnap.docs.length - 1]
-        setLastFetchedListing(lastVisible)
+        // const lastVisible = querySnap.docs[querySnap.docs.length - 1]
+        // setLastFetchedListing(lastVisible)
 
         const cars = []
 

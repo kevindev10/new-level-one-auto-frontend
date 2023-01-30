@@ -1,31 +1,17 @@
 
 
-import { useState,  useEffect, useRef } from 'react'
-import { Link, useNavigate, useParams, useHistory } from 'react-router-dom'
+import { useState,  useEffect } from 'react'
+import {  useParams, useHistory } from 'react-router-dom'
 import './Car.css'
-//import { Helmet } from 'react-helmet'
-//import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
-//import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
-// import { Swiper, SwiperSlide } from 'swiper/react'
-// import 'swiper/swiper-bundle.css'
 import { getDoc, doc } from 'firebase/firestore'
-import { getAuth } from 'firebase/auth'
 import { db } from '../firebase.config'
 import Spinner from '../components/Spinner'
-import shareIcon from '../assets/svg/shareIcon.svg'
-//SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
 import Slider from "react-slick";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import {EmailShareButton, FacebookShareButton, TwitterShareButton, WhatsappShareButton} from "react-share";
-import {EmailIcon, FacebookIcon, TwitterIcon, WhatsappIcon,  PinterestIcon, LinkedinIcon} from "react-share";
+import {EmailIcon, FacebookIcon, TwitterIcon, WhatsappIcon} from "react-share";
 import ContactForm from '../components/ContactForm'
-
-
-
-
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
@@ -35,28 +21,24 @@ import Fade from '@mui/material/Fade';
 import audi  from '../assets/photos/audi_r8_x.jpg'
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 import Footer from '../components/Footer'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+
 
 
 function Car() {
 
   const [car, setCar] = useState(null)
   const [loading, setLoading] = useState(true)
-  const [shareLinkCopied, setShareLinkCopied] = useState(false)
-  
-  // const navigate = useNavigate()
   const history = useHistory()
   const params = useParams()
-  const auth = getAuth()
-
-   
-
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   const [nav3, setNav3] = useState();
-
   const [open, setOpen] = useState(false);
 
 
+
+  
 
 
   useEffect(() => {
@@ -66,7 +48,7 @@ function Car() {
 
       if (docSnap.exists()) {
         setCar(docSnap.data())
-        // console.log(docSnap.data())
+       
         setLoading(false)
       }
     }
@@ -87,14 +69,6 @@ function Car() {
 
 
 
-  // const settingsMain = {
-  //   arrows:true,
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1
-  // };
 
   const settingsMain1 = {
    
@@ -104,8 +78,7 @@ function Car() {
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
-    // nextArrow: <SampleNextArrow />,
-    // prevArrow: <SamplePrevArrow />
+  
 
   };
 
@@ -124,31 +97,6 @@ function Car() {
 
 
 
-// const getCarPics = () => {
-//       return car.imageUrls.map((imageUrl, i)=>{
-        
-//         return <div key={params.carId}>
-//                   <h3>
-
-//                         <div>
-
-
-//                                   <div>
-                                   
-//                                       <img src={imageUrl} alt={car.title} />
-
-
-//                                   </div>
-
-
-
-//                         </div>
-
-
-//                   </h3>
-//                 </div>
-//       })
-// }
 
 
 const getCarPics = () => {
@@ -263,20 +211,6 @@ const imageArrayRight = getArray(carImageUrls3 , index3)
 
 
 
-
-
-
-
-// Share Url
-
-const shareUrl = window.location.href;
-
-
-
-
-
-
-
  // Enquire Modal styling 
 
 const style2 = {
@@ -295,17 +229,24 @@ const style2 = {
 
 
 
-// Enqire  Modal  methods
-// const handleOpen = () => setOpen(true);
+
 const handleClose = () =>{
   setOpen(false)
-  // window.location.reload()
+ 
 } ;
 
 
 
 
 
+// Share Url
+
+let shareUrl = window.location.href;
+let title = car.title
+let image = car.imageUrls[0]
+let hashtag = '#leveloneauto' 
+let quote =  "";
+let description = car.description
 
 
 
@@ -320,7 +261,45 @@ const handleClose = () =>{
 
 
   return (
+
   <>
+<HelmetProvider>
+  <div>
+
+  <Helmet>
+            <title>{title}</title>
+            <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="csrf_token" content="" />
+            <meta property="type" content="website" />
+            <meta property="url" content={shareUrl} />
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+            <meta name="msapplication-TileColor" content="#ffffff" />
+            <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+            <meta name="theme-color" content="#ffffff" />
+            <meta name="_token" content="" />
+            <meta name="robots" content="noodp" />
+            <meta property="title" content={title} />
+            <meta property="quote" content={quote} />
+            <meta name="description" content={description} />
+            <meta property="image" content={image} />
+            <meta property="og:locale" content="en_US" />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content={title} />
+            <meta property="og:quote" content={quote} />
+            <meta property="og:hashtag" content={hashtag} />
+            <meta property="og:image" content={image} />
+            <meta content="image/*" property="og:image:type" />
+            <meta property="og:url" content={shareUrl} />
+            <meta property="og:site_name" content="Level One Auto" />
+            <meta property="og:description" content={description} />  
+      </Helmet>
+
+
+  </div>
+</HelmetProvider>
+
+
     <main
     className='car-page-main-div'
     
@@ -508,15 +487,15 @@ const handleClose = () =>{
                             <div className='share' style={{display:'flex', }}>
                                 <p className="Share-this-vehicle" style={{fontSize: "1.0rem", lineHeight: "30px", marginRight:'2.5%' }}>Share this vehicle </p>
                                 <span className=''>
-                                <FacebookShareButton className='' url={shareUrl} quote={'Level One Auto'} >
+                                <FacebookShareButton className='' url={shareUrl} quote={'Level One Auto'} hashtag="#leveloneauto" >
                                     <FacebookIcon size ={30} round={true} style={{marginRight:'2.5%'}}/>
                                 </FacebookShareButton>&nbsp;&nbsp;&nbsp;
 
-                                <TwitterShareButton className=''  url={shareUrl} quote={'Level One Auto'}>
+                                <TwitterShareButton className=''  url={shareUrl} quote={'Level One Auto'} hashtag="#leveloneauto" >
                                     <TwitterIcon size ={30} round={true}/>
                                 </TwitterShareButton>&nbsp;&nbsp;&nbsp;
 
-                                <WhatsappShareButton className=''  url={shareUrl} quote={'Level One Auto'}>
+                                <WhatsappShareButton className=''  url={shareUrl} quote={'Level One Auto'} separator="::">
                                     <WhatsappIcon size ={30} round={true}/>
                                 </WhatsappShareButton>&nbsp;&nbsp;&nbsp;
 
@@ -715,15 +694,7 @@ const handleClose = () =>{
 
         <div style={{backgroundColor:'white', padding:'2.5%'}}   >
    
-            {/* <p className='listingLocation'>{listing.location}</p> */}
-            {/* <p className='listingType'>
-              {car.sold === true ? 'Sold' : 'For Sale'}
-            </p>
-            {car.offer && (
-              <p className='discountPrice'>
-                Ksh {parseInt(car.regularPrice) - parseInt(car.discountedPrice)} discount
-              </p>
-            )} */}
+         
 
        
           <div className='vehicle-ovwerview'  style={{fontSize:'1.6rem', color:'maroon', textAlign:'center'}}>

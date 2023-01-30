@@ -33,7 +33,7 @@ import  ViewFeaturedCar from './pages/ViewFeaturedCar'
 function App() {
 
         const history = createBrowserHistory();
-        wrapHistory(history, { renderTimeout: 750 });
+        wrapHistory(history, { renderTimeout: 500 });
   return (
     <>
 

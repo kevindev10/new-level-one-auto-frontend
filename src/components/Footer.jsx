@@ -57,6 +57,11 @@ function Footer() {
                   Contact Us
                 </Link>
               </Box>
+              <Box>
+                <Link to="/login"  onClick={() => window.scrollTo(0, 0)}  color="inherit" className ='footer-navlinks'  underline="none">
+                  Staff Email
+                </Link>
+              </Box>
             </Grid>
 
 

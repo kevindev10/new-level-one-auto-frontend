@@ -1,6 +1,6 @@
 
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import CompanyLogo from '../assets/Logos/Logo.jpg'
 import { Form, Field } from "react-final-form";
 import Button from '@mui/material/Button';
@@ -52,7 +52,7 @@ function ContactForm({car, carUrl}) {
 
   // process.env.REACT_APP_ PORT
 
-  const FETCHPORT =  process.env.REACT_APP_PORT || 3001 ;
+  // const FETCHPORT =  process.env.REACT_APP_PORT || 3001 ;
  
 
 
@@ -61,7 +61,7 @@ function ContactForm({car, carUrl}) {
 
 
     setLoading(true)
-    fetch(`http://192.168.100.4:${FETCHPORT}/contactUs`, {
+    fetch(`https://leveloneautoserver.flexdevske.co.ke/contactUs`, {
       method:'post',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({

@@ -11,7 +11,7 @@ import {
 } from 'firebase/storage'
 import { doc, updateDoc, getDoc, serverTimestamp } from 'firebase/firestore'
 import { db } from '../firebase.config'
-import { useNavigate, useParams, useHistory } from 'react-router-dom'
+import {  useParams, useHistory } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { v4 as uuidv4 } from 'uuid'
 import Spinner from '../components/Spinner'

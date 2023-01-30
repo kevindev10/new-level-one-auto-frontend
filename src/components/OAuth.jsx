@@ -1,4 +1,4 @@
-import { useLocation, useNavigate, useHistory } from 'react-router-dom'
+import { useLocation, useHistory } from 'react-router-dom'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore'
 import { db } from '../firebase.config'
@@ -6,7 +6,7 @@ import { toast } from 'react-toastify'
 import googleIcon from '../assets/svg/googleIcon.svg'
 
 function OAuth() {
-  // const navigate = useNavigate()
+ 
   const history  = useHistory()
   const location = useLocation()
 

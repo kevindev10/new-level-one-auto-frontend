@@ -13,8 +13,8 @@ import {
   query,
   where,
   orderBy,
-  limit,
-  startAfter,
+  // limit,
+  // startAfter,
 } from 'firebase/firestore'
 import { db } from '../firebase.config'
 import { toast } from 'react-toastify'
@@ -31,7 +31,7 @@ function PreviouslySold() {
 
   const [cars, setCars] = useState(null)
   const [loading, setLoading] = useState(true)
-  const [lastFetchedListing, setLastFetchedListing] = useState(null)
+  // const [lastFetchedListing, setLastFetchedListing] = useState(null)
 
 
 
@@ -57,8 +57,8 @@ function PreviouslySold() {
         // Execute query
         const querySnap = await getDocs(q)
 
-        const lastVisible = querySnap.docs[querySnap.docs.length - 1]
-        setLastFetchedListing(lastVisible)
+        // const lastVisible = querySnap.docs[querySnap.docs.length - 1]
+        // setLastFetchedListing(lastVisible)
 
         const cars = []
 

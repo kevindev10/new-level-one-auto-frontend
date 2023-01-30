@@ -1,10 +1,10 @@
 
 import { useState, useEffect } from 'react'
-import { getAuth, updateProfile } from 'firebase/auth'
-import { useNavigate, useHistory } from 'react-router-dom'
+import { getAuth } from 'firebase/auth'
+import { useHistory } from 'react-router-dom'
 
 import { 
-  updateDoc,
+
   doc,
   collection,
   getDocs,
@@ -12,22 +12,14 @@ import {
   where,
   orderBy,
   deleteDoc,
-  getCountFromServer
+
  } from 'firebase/firestore'
 import { db } from '../firebase.config'
 import { toast } from 'react-toastify'
-import arrowRight from '../assets/svg/keyboardArrowRightIcon.svg'
+
 import CarItem from '../components/CarItem'
 import './Admin.css'
 import Footer from '../components/Footer'
-import Modal from '@mui/material/Modal';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
-import EditCar from './EditCar'
-
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Fade from '@mui/material/Fade';
 
 
 
@@ -37,12 +29,7 @@ function ViewCarsInStock() {
 
   const [loading, setLoading] = useState(true)
   const [cars, setCars] = useState(null)
-  const [open, setOpen] = useState(false);
-  const [id, setId] = useState('')
-
-
   const auth = getAuth()
-  // const navigate = useNavigate()
   const history = useHistory()
 
 
@@ -93,49 +80,7 @@ function ViewCarsInStock() {
 
   const onEdit = (carId) => history.push(`/edit-car/${carId}`)
 
-  // const onEdit = (id) => {
-  //  setId(id)
-  //   setTimeout(() =>{
-          
-  //         setOpen(true) 
-  //       }, 500)
-
-  // }
-
-  // onClick={() =>{
-  //   setTimeout(() =>{
-  //     setOpen(true) 
-  //   }, 500)
-  // }}
-
-
- // Enquire Modal styling 
-
- const style3 = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: "100%",
-  height: "100%",
-  // bgcolor: 'background.gray',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 0,
-  overflowY: "auto"
-};
-
-
-
-// Enqire  Modal  methods
-// const handleOpen = () => setOpen(true);
-const handleClose = () =>{
-  setOpen(false)
-
-} ;
-
-
-
+  
 
 
 

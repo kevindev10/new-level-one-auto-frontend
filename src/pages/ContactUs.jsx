@@ -1,5 +1,5 @@
 
-import faq from '../assets/stockPagePhotos/faqs.jpg'
+
 import Footer from '../components/Footer'
 import contactUs from '../assets/stockPagePhotos/Contact_Us.jpg'
 import './ContactUs.css';
@@ -7,7 +7,7 @@ import { Form, Field } from "react-final-form";
 import Button from '@mui/material/Button';
 
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 
 
 
@@ -49,11 +49,7 @@ function ContactUs() {
 	}
 
 
-  // process.env.REACT_APP_OPENWEATHER_GEOCODE_API_KEY
 
-  // REACT_APP_ PORT
-
-  // process.env.REACT_APP_ PORT
 
   const FETCHPORT =  process.env.REACT_APP_PORT || 3001 ;
  
@@ -64,7 +60,7 @@ function ContactUs() {
 
 
     setLoading(true)
-    fetch(`http://192.168.100.4:${FETCHPORT}/contactUs`, {
+    fetch(`https://leveloneautoserver.flexdevske.co.ke/contactUs`, {
       method:'post',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
