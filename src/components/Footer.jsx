@@ -136,9 +136,24 @@ function Footer() {
               </Box>
             </Grid>
           </Grid>
-          <Box textAlign="center" pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 0 }}>
+          <Box textAlign="center" pt={{ xs: 5, sm: 10 }} >
             Level One Auto &reg; {new Date().getFullYear()}
           </Box>
+       
+
+         
+            <div style={{display:'flex', justifyContent:'center', alignItems:'center', marginTop:'1.5%', marginBottom:'2.5%'}}>
+              <span style={{color:'white', marginRight:'0.5%'}}>Powered by</span>
+            <span>
+              <a href="https://www.flexdevske.co.ke/" target="blank" rel="noreferrer" style={{color:'orange'}}> Flex DevsKE
+              </a> 
+              </span>
+
+            </div>
+           
+            
+         
+
         </Container>
       </Box>
     </footer>
